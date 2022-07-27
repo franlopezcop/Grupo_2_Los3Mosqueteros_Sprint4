@@ -683,6 +683,8 @@ h1::after{
 
 main section div.products {
     padding: 20px;
+
+
 }
 
 main section div.products article {
@@ -691,6 +693,7 @@ main section div.products article {
     padding-bottom: 5px;
     margin-bottom: 5%;
     transition: all 600ms;
+
 }
 
 main section div.products article:hover {
@@ -951,6 +954,24 @@ h2{
     margin-bottom: 2px;
     margin-top:6px;
     font-family: 'Orbitron', sans-serif;
+}
+.category-control{
+    width: 100%;
+    background-color: #535C66;
+    padding:0.5rem;
+    margin-bottom: 2px;
+    margin-top: 4px;
+    border: none;
+    font-family: 'Purista', sans-serif;
+    color: #fff;
+    display: block;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px var(--gray);
+    
+    
+
 }
 .control{
     width: 100%;

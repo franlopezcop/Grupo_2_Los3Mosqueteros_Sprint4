@@ -4,7 +4,8 @@
   "description": "**Descripción de negocio:**",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon ./src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "nodemon": "^2.0.19",
     "normalize": "^0.3.1",
     "normalize.css": "^8.0.1"
   },
