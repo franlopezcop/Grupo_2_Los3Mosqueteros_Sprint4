@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../partials/head.ejs") %>
+        <title>Detalle</title>
+    </head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main class ="main-detail">
+            <h2 class="title">DETALLE DEL PRODUCTO</h2>
+        </section>
+        <section class="main.conteiner">
+                    <img class="img-product" src ="/images/<%= product.image%>" alt="imagen producto">
+                    <div class="inf-product">
+                        <h4> <%= product.name %> </h4>
+                        <h4><%= product.price %></h4>
+                        <h4><%= product.discount %></h4>
+                        <br>
+                        <h4>Descripción:
+                            <p class="description-v"> <%= product.description %></p>
+                            <br>
+                        </h4>
+                        <h4>Medidas:
+                            <p><%= product.measures %></p>
+
+                            <!--<h4>Escritorio X </h4>
+                        <h4>$40.000</h4>
+                        <br>
+                        <h4>Descripción:
+                            <p class="description-v"> Escritorio hecho con madera refinada y soporte de hierro en forma de X. Con un atractivo diseño, este modelo combina lo fino y delicado con el estilo industrial e informal, ideal para cualquier espacio de la casa.</p>
+                            <br>
+                        </h4>
+                        <h4>Medidas:
+                            <p>74cm de altura - 60 cm de ancho - 120cm de largo.</p>*-->
+                        </h4>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                            <a class="add-cart" href="/products/productCart" role="button"><p>Agregar al carrito</p></a> 
+                        </form>
+                        <br>
+                    </div>
+        </section>
+        <%- include("../partials/seguinos.ejs") %>
+        <%- include("../partials/conoceMas.ejs") %>
+        </main>
+        <%- include("../partials/footer.ejs") %>
+</body>
+</html>
+

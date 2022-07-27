@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../partials/head.ejs") %>
+        <title>Login</title>
+    </head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main class="main-login-register">
+        <h2 class="title">
+            
+            INICIAR SESIÓN
+            
+        </h2>
+
+       <!-- <section class="efecto-principal">
+            <h2 class="lines-effect">INICIAR SESIÓN</h2>
+        </section>-->
+        <form class="login-register-form" action="#" method="post">
+            <div>
+                <label for="email">Email</label>
+                <input class='control' type="email" id="email" name="visitor_email" placeholder="ejemplo@gmail.com" required>
+            </div>
+            <div>
+                <label for="password">Contraseña</label>
+                <input class='control' type="password" id="password" name="visitor_password" placeholder="Contraseña" required>
+                <a href=#><p>¿Olvidaste tu contraseña?</p></a>
+            </div>
+            <div class="login-register-btn" id="remember">
+                <label for="remember"><p>Recordar mi usuario</p></label>
+                <input type="checkbox" id="remember" name="remember" value="remember">
+            </div>
+            <div class="login-register-btn">
+                <input class="button" type="submit" value="INICIAR SESIÓN">
+                <p>¿No tenés cuenta? <a href="/users/register">Registrate acá!</a></p>
+            </div>
+        </form>
+        <%- include("../partials/seguinos.ejs") %>
+        <%- include("../partials/conoceMas.ejs") %>
+    
+    </main>   
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "sprint2",
+  "version": "1.0.0",
+  "description": "**Descripción de negocio:**",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "normalize": "^0.3.1",
+    "normalize.css": "^8.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaurinLF/Grupo_2_Los3Mosqueteros_Sprint2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LaurinLF/Grupo_2_Los3Mosqueteros_Sprint2/issues"
+  },
+  "homepage": "https://github.com/LaurinLF/Grupo_2_Los3Mosqueteros_Sprint2#readme"
+}

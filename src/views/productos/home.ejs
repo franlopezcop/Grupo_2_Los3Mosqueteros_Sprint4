@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../partials/head.ejs") %>
+        <title>Home</title>
+    </head>
+<body>
+
+    <%- include("../partials/header.ejs") %>
+    
+    <main class="main-login-register">
+        <section class="banner">
+            <div>
+                <img src="/images/banner-3.png" alt="Banner de ofertas">
+            </div>
+        </section>
+        <section >
+            <h2 class="title">OFERTAS</h2>
+        </section>
+            <section class="last-visit">
+                <div class="products">
+                    <% saleProducts.forEach ( product => { %>
+                        <a class="link-detail" href="/products/detalle/<%= product.id %>"> <!-- Faltaria agregar la ruta dinamica con el :id y tambien agregarselo al route del detalle -->
+                            <article>
+                                <figure>
+                                    <img src="/images/<%= product.image %>" class="product_img" width=250px alt="escritorio">
+                                </figure>
+                                <div class="main-article">
+                                    <h4 class="description"> <%= product.name %> </h4>
+                                    <div class="price-and-discount">
+                                        <p class="price"> <%= product.price %> </p>
+                                        <p class="discount"> <%= product.discount %>% OFF</p>
+                                    </div>                            
+                                    <a class="add-cart" href="/products/productCart" role="button"><p>Agregar al carrito</p></a>
+                                </div>
+                            </article>
+                        </a>
+                    <% } ) %>
+
+                    <!-- <a class="link-detail" href="/products/detail">
+                        <article>
+                            <figure>
+                                <img src="/images/escritorio.jpg" class="product_img" width=250px alt="escritorio">
+                            </figure>
+                            <div class="main-article">
+                                <h4 class="description">Escritorio X</h4>
+                                <div class="price-and-discount">
+                                    <p class="price">$13.500</p>
+                                    <p class="discount">10% OFF</p>
+                                </div>                            
+                                <a class="add-cart" href="/productCart" role="button"><p>Agregar al carrito</p></a>
+                            </div>
+                        </article>
+                    </a>
+                    <a class="link-detail" href="/detalle">
+                        <article>
+                            <figure>
+                                <img src="/images/mesa-x.jpg" class="product_img" width=250px alt="mesa">
+                            </figure>
+                            <div class="main-article">
+                                <h4 class="description">Mesa Cruz Guayubirá</h4>
+                                <div class="price-and-discount">
+                                    <p class="price">$130.000</p>
+                                    <p class="discount">15% OFF</p>
+                                </div>         
+                                <a class="add-cart" href="/productCart" role="button"><p>Agregar al carrito</p></a>
+                            </div>                
+                        </article>
+                    </a> 
+                    <a class="link-detail" href="/detalle">
+                        <article>
+                            <figure>
+                                <img src="/images/mesa-ratona.png" class="product_img" width=250px alt="Mesa Ratona">
+                            </figure>
+                            <div class="main-article">
+                                <h4 class="description">Mesa Ratona</h4>
+                                <div class="price-and-discount">
+                                    <p class="price">$13.500</p>
+                                    <p class="discount">5% OFF</p>
+                                </div>                        
+                                <a class="add-cart" href="/productCart" role="button"><p>Agregar al carrito</p></a>
+                            </div>                
+                        </article>
+                    </a>
+                    <a class="link-detail" href="/detalle">
+                        <article>
+                            <figure>
+                                <img src="/images/espejo.jpg" class="product_img" width=250px alt="Espejo">
+                            </figure>
+                            <div class="main-article">
+                                <h4 class="description">Espejo Blackfe</h4>
+                                <div class="price-and-discount">
+                                    <p class="price">$21.900</p>
+                                    <p class="discount">10% OFF</p>                            
+                                </div>
+                                <a class="add-cart" href="/productCart" role="button"><p>Agregar al carrito</p></a>
+                            </div>                
+                        </article> 
+                    </a> -->
+                </div>
+            </section>
+            <%- include("../partials/seguinos.ejs") %>
+            <%- include("../partials/conoceMas.ejs") %>
+        
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>
