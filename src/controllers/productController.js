@@ -1,10 +1,19 @@
-const products = require("../database/products")
 
+const jsonDB = require('../model/jsonDatabase');
+const products = jsonDB('products')
+const allProducts = products.all()
 const productController = {
     listadoProductos: (req,res) =>{
-        res.render("productos/home",
+        const table = allProducts.filter( product => product.category == "table" );
+        const coffeeTable = allProducts.filter( product => product.category == "coffeeTable" );
+        const desk = allProducts.filter( product => product.category == "desk" );
+        const mirror = allProducts.filter( product => product.category == "mirror" );
+        res.render("productos/products",
         {
-            products
+            table,
+            coffeeTable,
+            desk,
+            mirror
         }
         )
     },
@@ -17,12 +26,12 @@ const productController = {
     },
 
     detalle: (req,res) =>{
-        const id = Number(req.params.id)
-        const product = products.find(product => product.id === id)
+        const product = products.find(req.params.id);
+        /*const product = products.find(product => product.id === id)*/
         res.render("productos/productDetail",
         {
             product,
-            products
+
         }
         )
     },
@@ -31,16 +40,17 @@ const productController = {
 
     crear: (req,res) =>{
         res.render("productos/addProduct",
-        {
+       /* {
             products
-        }
+        }*/
         )
     },
 
     editar: (req,res) =>{
+        let productToEdit = products.find(req.params.id)
         res.render("productos/editProduct",
         {
-            products
+            productToEdit
         }
         )
     },

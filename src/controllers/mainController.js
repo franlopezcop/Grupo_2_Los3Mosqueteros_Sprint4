@@ -1,8 +1,9 @@
-const products = require("../database/products")
-
+const jsonDB = require('../model/jsonDatabase');
+const products = jsonDB('products')
+const allProductos = products.all()
 const mainController = {
     home: (req,res) =>{
-        const saleProducts = products.filter( product => product.Descuento != 0 );
+        const saleProducts = allProductos.filter( product => product.Descuento != 0 );
         res.render("productos/home",
         {
             saleProducts
