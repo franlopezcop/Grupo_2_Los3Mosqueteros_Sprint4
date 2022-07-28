@@ -3,14 +3,22 @@ const router = express.Router();
 
 const productController = require("../controllers/productController")
 
+const upload = require('../middleware/middlemulter')
+
 router.get("/", productController.listadoProductos)
+
+router.get("/create", productController.create)
+
+router.post('/', upload.array('image'), productController.store); // revisar si coincide el name en form
+
+router.get("/detalle/:id", productController.detail)
 
 router.get("/productCart", productController.carrito)
 
-router.get("/detalle/:id", productController.detalle)
+router.get("/edit/:id", productController.edit)
 
-router.get("/create", productController.crear)
+router.put('/edit/:id', productController.update); 
 
-router.get("/edit/:id", productController.editar)
+router.delete('/delete/:id', productController.destroy); 
 
 module.exports = router
