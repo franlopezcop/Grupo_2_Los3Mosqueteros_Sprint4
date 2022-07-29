@@ -11,30 +11,30 @@
     <main class="main-login-register">
         
             <h2 class="title">EDITAR PRODUCTO</h2>
-            <form class="login-register-form" action="/" method="get">
+            <form class="login-register-form" action="/products/edit/<%= productToEdit.id %>?_method=PUT"  method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="name">Nombre del Producto</label>
-                    <input class='control' type="text" id="name" name="name" placeholder="Mesa Ratona">
+                    <input class='control' type="text" id="name" name="name" value="<%= productToEdit.name %> ">
                 </div>
                 <div>
                     <label for="description">Descripción</label>
-                    <textarea class='control' id="description" name="description" placeholder="Comentario del producto"></textarea>
+                    <textarea class='control' id="description" name="description" placeholder="Comentario del producto" value=""><%= productToEdit.description %></textarea>
                 </div>
                 <div>
                     <label for="image">Imagen</label>
-                    <input class='control' type="file" id="image" name="product-image" accept=".jpg, .png, .jpeg">
+                    <input class='control' type="file" id="image" name="image" multiple accept=".jpg, .png, .jpeg, .svg" value="<%= productToEdit.image[0]%>">
                 </div>
                 <div>
                     <label for="size">Medidas</label>
-                    <input class='control' type="text" id="size" name="size" placeholder="Largo - Ancho - Alto">
+                    <input class='control' type="text" id="measures" name="measures" value="<%= parseInt(productToEdit.measures) %>">
                 </div>
                 <div>
                     <label for="price">Precio</label>
-                    <input class='control' type="number" id="price" name="product-price" placeholder="$10000" >
+                    <input class='control' type="number" id="price" name="price" value="<%= parseInt(productToEdit.price) %>" >
                 </div>
                 <div>
                     <label for="discount">Descuento</label>
-                    <input class='control' type="number" id="discount" name="product-discount" placeholder="10" >
+                    <input class='control' type="number" id="discount" name="discount" value="<%= parseInt(productToEdit.discount) %>" >
                 </div>
                 <div class="create-btn">
                     <input class="button" type="submit" value="CREAR">

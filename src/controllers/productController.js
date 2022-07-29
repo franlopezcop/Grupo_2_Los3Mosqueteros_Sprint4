@@ -1,5 +1,5 @@
 const jsonDB = require('../model/jsonDatabase'); 
-const products = jsonDB('products') // funcionalides?
+const products = jsonDB('products') // funcionalides de json database
 const allProducts = products.all() // productos? todo lo que labura con el array de productos va con allproducts
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -62,12 +62,12 @@ const productController = {
 
 		const newProduct = {
 			...req.body,
-			image: req.files.length >= 1  ? images : ["default-image.png"] // falta agregar img x default
+			image: req.files.length >= 1  ? images : ["default-image.svg"]
 
 		}
 		products.create(newProduct)
 		console.log('cree un nuevo producto')
-		res.redirect('/')
+		res.redirect('/products')
 	},
 
     // Update - Form to edit

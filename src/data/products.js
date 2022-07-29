@@ -1,4 +1,4 @@
-const products = [{ 
+/*const products = [{ 
     id: 1,
     name: "Escritorio X" ,
     price: "$40.000",
@@ -40,4 +40,4 @@ const products = [{
 },
 ]
 
-module.exports = products
+module.exports = products*/

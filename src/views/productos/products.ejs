@@ -20,7 +20,7 @@
             <section class="last-visit">
                 <div class="products">
                     <% table.forEach ( product => { %>
-                        <a class="link-detail" href="/products/detalle/<%= product.id %>"> <!-- Faltaria agregar la ruta dinamica con el :id y tambien agregarselo al route del detalle -->
+                        <a class="link-detail" href="/products/detalle/<%= product.id %>">
                             <article>
                                 <figure>
                                     <img src="/images/<%= product.image %>" class="product_img" width=250px alt="escritorio">
@@ -28,8 +28,12 @@
                                 <div class="main-article">
                                     <h4 class="description"> <%= product.name %> </h4>
                                     <div class="price-and-discount">
-                                        <p class="price"> <%= product.price %> </p>
-                                        <p class="discount"> <%= product.discount %>% OFF</p>
+                                        <p class="price"> $<%= product.price %> </p>
+                                        <% if(product.discount !=0) {%>
+                                            <p class="discount"> 
+                                                <%= product.discount %>% OFF</p>
+                                                <% } else{null} %>
+                                        
                                     </div>                            
                                     <a class="add-cart" href="/products/productCart" role="button"><p>Agregar al carrito</p></a>
                                 </div>
@@ -52,8 +56,11 @@
                                     <div class="main-article">
                                         <h4 class="description"> <%= product.name %> </h4>
                                         <div class="price-and-discount">
-                                            <p class="price"> <%= product.price %> </p>
-                                            <p class="discount"> <%= product.discount %>% OFF</p>
+                                            <p class="price"> $<%= product.price %> </p>
+                                            <% if(product.discount !=0) {%>
+                                                <p class="discount"> 
+                                                    <%= product.discount %>% OFF</p>
+                                                    <% } else{null} %>
                                         </div>                            
                                         <a class="add-cart" href="/products/productCart" role="button"><p>Agregar al carrito</p></a>
                                     </div>
@@ -76,8 +83,11 @@
                                         <div class="main-article">
                                             <h4 class="description"> <%= product.name %> </h4>
                                             <div class="price-and-discount">
-                                                <p class="price"> <%= product.price %> </p>
-                                                <p class="discount"> <%= product.discount %>% OFF</p>
+                                                <p class="price"> $<%= product.price %> </p>
+                                                <% if(product.discount !=0) {%>
+                                                    <p class="discount"> 
+                                                        <%= product.discount %>% OFF</p>
+                                                        <% } else{null} %>
                                             </div>                            
                                             <a class="add-cart" href="/products/productCart" role="button"><p>Agregar al carrito</p></a>
                                         </div>
@@ -100,8 +110,12 @@
                                             <div class="main-article">
                                                 <h4 class="description"> <%= product.name %> </h4>
                                                 <div class="price-and-discount">
-                                                    <p class="price"> <%= product.price %> </p>
-                                                    <p class="discount"> <%= product.discount %>% OFF</p>
+                                                    <p class="price"> $<%= product.price %> </p>
+                                                    <% if(product.discount !=0) {%>
+                                                        <p class="discount"> 
+                                                            <%= product.discount %>% OFF</p>
+                                                            <% } else{null} %>
+                                                    
                                                 </div>                            
                                                 <a class="add-cart" href="/products/productCart" role="button"><p>Agregar al carrito</p></a>
                                             </div>

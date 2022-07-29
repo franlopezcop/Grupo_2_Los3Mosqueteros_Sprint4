@@ -13,8 +13,12 @@
                     <img class="img-product" src ="/images/<%= product.image%>" alt="imagen producto">
                     <div class="inf-product">
                         <h4> <%= product.name %> </h4>
-                        <h4><%= product.price %></h4>
-                        <h4><%= product.discount %></h4>
+                        <h4>$<%= product.price %></h4>
+                        <h4> <% if(product.discount !=0) {%>
+                            <p class="discount"> 
+                                <%= product.discount %>% OFF</h4>
+                                <% } else{null} %>
+                        
                         <br>
                         <h4>Descripción:
                             <p class="description-v"> <%= product.description %></p>
