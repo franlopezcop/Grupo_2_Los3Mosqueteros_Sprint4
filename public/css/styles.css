@@ -454,9 +454,60 @@ footer section h5, span{
 
 
 
+/* BOTONES ADMIN */
+
+.button-admin {
+        display: inline-block;
+        padding: 30px 10px 5px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        align-items: center;
+    
+    }
 
 
+.button-admin a,
+.button-admin form {
+    width: 50%;
+}
 
+ form .button-delete { 
+    width: 75%;
+    color:white;
+    border: none;
+    padding: 10px 5px;
+    background-color: #535C66;
+    font-size: 14px;
+    font-family: orbitron;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+    font-weight: bold;
+    transition: all 0.4s
+    
+ }
+
+.button-edit {
+    width: 75%;
+    color:white;
+    border: none;
+    padding: 10px 5px;
+    background-color: #535C66;
+    font-size: 14px;
+    font-family: orbitron;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+    font-weight: bold;
+    transition: all 0.4s
+}
+
+
+ form .button-delete:hover, .button-edit:hover  {
+    background-color: #292E33;
+    color:#E04B3C;
+}
 
 
 
