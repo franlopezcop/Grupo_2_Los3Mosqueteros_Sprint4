@@ -23,6 +23,6 @@ Continuar haciendo 💪
 Hacer menos 👀
 - No detenernos en detalles pequeños que nos gustaria, sino realizar foco en el proyecto madre a entregar.
 - Querer hacer mucho mas de lo establecido (apuntar a la luna sin tener el cohete) 
--Dejar cosas para último momento (no colgar)
+- Dejar cosas para último momento (no colgar)
 
 

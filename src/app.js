@@ -4,6 +4,7 @@ const path = require('path')
 const port = process.env.PORT || 3000;
 
 
+
 let publicPath = path.resolve(__dirname, "../public")
 app.use(express.static(publicPath))
 
@@ -18,6 +19,9 @@ app.use("/users", userRouter)
 
 const productRouter = require("./routes/productRouter")
 app.use("/products", productRouter)
+
+
+
 
 
 
