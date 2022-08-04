@@ -125,12 +125,9 @@ const modelController = function (name) {
             let rows = this.all();
             let allElementsFound = rows.filter(element => element.estado == text);
             return allElementsFound;
-        }
+        },
 
-
-
-       
-
+    
 
 
     }
