@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 // Recibo por parámetro la entidad para reutilizarlo
 
-
 const modelController = function (name) {
     console.log('entre al modelo de Mercado')
     console.log(name)

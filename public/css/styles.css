@@ -855,7 +855,8 @@ a.link-detail {
     }
 
     main section div.products article {
-        width: 45%;
+        width: 48%;
+        margin: 1%;
     }
 
 
@@ -864,7 +865,13 @@ a.link-detail {
 @media (min-width: 960px) {
     main section div.products article {
         width: 22%;
-        margin-bottom: 0%;
+        margin: 1%;
+    }
+
+    main section div.products {
+        padding: 0px;
+        margin: 2% 2% 0% 5.5%;
+        justify-content: flex-start;
     }
 
     p.price,
