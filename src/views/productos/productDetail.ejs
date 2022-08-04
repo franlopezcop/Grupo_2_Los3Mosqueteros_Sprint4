@@ -48,11 +48,18 @@
                             <a href="/products/edit/<%= product.id %>">
                                 <button class="button-edit">Editar <i class="fa-solid fa-file-pen"></i></button>
                             </a>
+                            <form 
+                            action="/products/delete/<%= product.id %>?_method=DELETE" 
+                            method="POST" style="display: inline-flex"
+                        >
+                            <button type="submit" class="action-button delete">ELIMINAR</button>
+                        </form>
+
+                            <!--
                            <form class="button-delete" action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                                 <button class="button-delete" type="submit">Eliminar</button>
                            </form>
                             </div> 
-                            <!--
                             <div class="button-admin">
                                 <input class="button" type="submit" value="Editar">
                                 <input class="button" type="submit" value="Eliminar">

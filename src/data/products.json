@@ -24,18 +24,6 @@
   "category": "table"
  },
  {
-  "id": 3,
-  "name": "Mesa Ratona",
-  "price": "13.500",
-  "description": "Mesa ratona estilo industrial, realizada con hierro y madera de pino",
-  "image": [
-   "mesa-ratona.png"
-  ],
-  "measures": "121cm de largo - 50cm de ancho x 47cm de alto.",
-  "discount": 5,
-  "category": "coffeeTable"
- },
- {
   "id": 4,
   "name": "Espejo Blackfe",
   "price": "21.900",
@@ -58,18 +46,6 @@
    "default-image.svg"
   ],
   "id": 5
- },
- {
-  "name": "Espejo blanco",
-  "description": "espejo muy bueno",
-  "measures": "largo",
-  "price": "10000",
-  "discount": "20",
-  "category": "mirror",
-  "image": [
-   "default-image.svg"
-  ],
-  "id": 6
  },
  {
   "name": "Mesa ratona",
