@@ -4,7 +4,14 @@ const path = require('path')
 const methodOverride =  require('method-override');
 const port = process.env.PORT || 3000;
 
+<<<<<<< HEAD
 app.use(methodOverride('_method'));
+=======
+
+
+app.use(methodOverride('_method')); 
+app.use(express.json());
+>>>>>>> 2b54b2fa38867f7ff7f8c78270af63bd41d03bb1
 
 let publicPath = path.resolve(__dirname, "../public")
 app.use(express.static(publicPath))
