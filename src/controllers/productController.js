@@ -1,6 +1,6 @@
 const jsonDB = require('../model/jsonDatabase'); 
 const products = jsonDB('products') // funcionalides de json database
-const allProducts = products.all() // productos? todo lo que labura con el array de productos va con allproducts
+const allProducts = products.all() // productos todo lo que labura con el array de productos va con allproducts
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
@@ -102,7 +102,21 @@ const productController = {
     // Update - Method to delete
 
     destroy: function(req,res){
-        products.delete(req.params.id);
+        // Desestructuramos el id del req.params
+        const { id } = req.params;
+
+        // Desestructuramos la propiedad image del producto encontrado y lo renombramos
+        const { image: imagenesBorrar} = products.find(id);
+        // Procedemos a iterar el array de imagenes con un forEach y borrarlas del FS
+        imagenesBorrar.forEach( file => {
+            const filePath = path.join(__dirname, `../../public/images/products/${file}`);
+            fs.unlinkSync(filePath);
+        });
+
+        // Borramos el producto del archivo JSON
+        productModel.delete(id);
+        
+        // Redirigimos al Home
         res.redirect("/");
     }
 
