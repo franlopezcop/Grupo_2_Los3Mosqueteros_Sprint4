@@ -4,14 +4,7 @@ const path = require('path')
 const methodOverride =  require('method-override');
 const port = process.env.PORT || 3000;
 
-<<<<<<< HEAD
 app.use(methodOverride('_method'));
-=======
-
-
-app.use(methodOverride('_method')); 
-app.use(express.json());
->>>>>>> 2b54b2fa38867f7ff7f8c78270af63bd41d03bb1
 
 let publicPath = path.resolve(__dirname, "../public")
 app.use(express.static(publicPath))
@@ -29,7 +22,7 @@ const productRouter = require("./routes/productRouter")
 app.use("/products", productRouter)
 
 
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
     const error = new Error('Error 404 - No se encontró la pagina solicitada');
     res.status(404).render('error', {
         message: error.message,
@@ -37,7 +30,7 @@ app.use((req, res, next) => {
         status: 404,
         error
     })
-})
+})*/
 
 app.listen(port, () => {
     console.log("Servidor corriendo en el puerto " + port);
