@@ -82,5 +82,17 @@
    "default-image.svg"
   ],
   "id": 9
+ },
+ {
+  "name": "Mesa Ratona Industrial unicornio 3000",
+  "description": "Hermosa mesa ratona realizada a mano en el camino hacia el dorado.",
+  "measures": "100 - 100 - 75",
+  "price": "45000",
+  "discount": "5",
+  "category": "coffeeTable",
+  "image": [
+   "imgProduct_1659658170813.jpg"
+  ],
+  "id": 10
  }
 ]
