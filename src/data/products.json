@@ -36,18 +36,6 @@
   "category": "mirror"
  },
  {
-  "name": "nuevo producto",
-  "description": "loguito",
-  "measures": "ancho",
-  "product-price": "1000",
-  "product-discount": "50",
-  "category": "mirror",
-  "image": [
-   "default-image.svg"
-  ],
-  "id": 5
- },
- {
   "name": "Mesa ratona",
   "description": "blanca",
   "measures": "alto",
@@ -58,18 +46,6 @@
    "imgProduct_1659052870675.jpg"
   ],
   "id": 7
- },
- {
-  "name": "mesa",
-  "description": "sin descuento",
-  "measures": "ancho",
-  "price": "10000",
-  "discount": "0",
-  "category": "table",
-  "image": [
-   "imgProduct_1659053372313.jpg"
-  ],
-  "id": 8
  },
  {
   "name": "",
