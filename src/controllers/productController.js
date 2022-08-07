@@ -13,6 +13,7 @@ const productController = {
         const mirror = allProducts.filter( product => product.category == "mirror" );
         res.render("productos/products",
         {
+            title: "Productos",
             table,
             coffeeTable,
             desk,
@@ -21,10 +22,11 @@ const productController = {
         )
     },
 
-    // va aca el carrito??? no lo vi en el controller de mercadomulter
+    
     carrito:(req,res) =>{
         res.render("productos/productCart",
         {
+            title: "Carrito",
             products,
             
         }
@@ -38,6 +40,7 @@ const productController = {
         /*const product = products.find(product => product.id === id)*/
         res.render("productos/productDetail",
         {
+            title: "Detalle",
             product,
             toThousand
 
@@ -48,18 +51,16 @@ const productController = {
    // Create - Form to create
 
     create: (req,res) =>{
-        res.render("productos/addProduct")
+        res.render("productos/addProduct", {title: "Crear producto"},)
     },
 
     // Create -  Method to store
     store: (req, res) => {
 		let images= []
-        for(let i = 0 ; i<req.files.length;i++){
-            images.push(req.files[i].filename) //tomo solamente el nombre, por eso filename
-        }
-
-		console.log(req.files);
-
+        let files = req.files
+        files.forEach(image => {
+			images.push(image.filename)
+		});
 
 		const newProduct = {
 			...req.body,
@@ -77,6 +78,7 @@ const productController = {
         let productToEdit = products.find(req.params.id)
         res.render("productos/editProduct",
         {
+            title: "Editar producto",
             productToEdit
         }
         )
@@ -85,42 +87,35 @@ const productController = {
     // Update - Method to update
 
     update: (req, res) => {
-		let productToEdit = products.find(req.params.id)
+		let id = Number(req.params.id);
+		let productToEdit = products.find(id);
+		let images = [];
+		let files = req.files
+		
+		// cambiamos ciclo for por forEach
+		files.forEach(image => {
+			images.push(image.filename)
+		});
 
 		productToEdit = {
-
 			id: productToEdit.id,
 			...req.body,
-		//	image: productToEdit.image,
-
+			// Si se suben imagenes se pone como valor el array imagenes y sino se queda el que ya estaba antes
+			image: files.length >= 1  ? images : productToEdit.image
 		}
 
 		products.update(productToEdit)
 		res.redirect("/");
-
 	},
+
 
     // Update - Method to delete
 
     destroy: function(req,res){
-        // Desestructuramos el id del req.params
-        const { id } = req.params;
-
-        // Desestructuramos la propiedad image del producto encontrado y lo renombramos
-        const { image: imagenesBorrar} = products.find(id);
-        // Procedemos a iterar el array de imagenes con un forEach y borrarlas del FS
-        imagenesBorrar.forEach( file => {
-            const filePath = path.join(__dirname, `../../public/images/${file}`);
-            fs.unlinkSync(filePath);
-        });
-
-        // Borramos el producto del archivo JSON
+        let id = Number(req.params.id);
         products.delete(id);
-        
-        // Redirigimos al Home
         res.redirect("/");
     }
-
 
 }
 

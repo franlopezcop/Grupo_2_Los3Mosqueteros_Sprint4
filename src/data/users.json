@@ -1,8 +1,42 @@
-[{
-    "firstName": "",
-    "lastName": "",
-    "email":"",
-    "password": "",
-    "category": "admin o client"
-    
-}]
+[
+    {
+        "id": 1,
+        "firstName": "Valentina",
+        "lastName": "Schroeder",
+        "email": "valenn.schr@gmail.com",
+        "avatar": "avatar1.jpg",
+        "password": "Delorian01",
+        "confirmPassword": "Delorian01",
+        "category": "user"
+    },
+    {
+        "id": 2,
+        "firstName": "Alberto",
+        "lastName": "Cortés",
+        "email": "cortesalberto_@gmail.com",
+        "avatar": "avatar2.jpg",
+        "password": "soySaxofonista10",
+        "confirmPassword": "soySaxofonista10",
+        "category": "user"  
+    },
+    {
+        "id": 3,
+        "firstName": "Nicolás",
+        "lastName": "Davite",
+        "email": "davitenicolas_@gmail.com",
+        "avatar": "avatar3.jpg",
+        "password": "aguanteBanfield9",
+        "confirmPassword": "aguanteBanfield9",
+        "category": "user"  
+    },
+    {
+        "id": 4,
+        "firstName": "Bill",
+        "lastName": "Closegate",
+        "email": "bill-closegate@gmail.com",
+        "avatar": "avatar4.jpg",
+        "password": "3openGate",
+        "confirmPassword": "3openGate",
+        "category": "user"  
+    }
+]

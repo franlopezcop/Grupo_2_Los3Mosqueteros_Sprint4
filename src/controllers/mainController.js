@@ -6,6 +6,7 @@ const mainController = {
         const saleProducts = allProductos.filter( product => product.discount != 0 );
         res.render("productos/home",
         {
+            title:"Ofertas",
             saleProducts
         }
         )

@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <%- include("../partials/head.ejs") %>
-    <title>Editar</title>
 </head>
 <body>
     <%- include("../partials/header.ejs") %>
@@ -22,7 +21,7 @@
                 </div>
                 <div>
                     <label for="image">Imagen</label>
-                    <input class='control' type="file" id="image" name="image" multiple accept=".jpg, .png, .jpeg, .svg" value="<%= productToEdit.image[0]%>">
+                    <input class='control' type="file" id="image" name="image" multiple accept=".jpg, .png, .jpeg, .svg" value="<%= productToEdit.image%>">
                 </div>
                 <div>
                     <label for="size">Medidas</label>
@@ -37,7 +36,7 @@
                     <input class='control' type="number" id="discount" name="discount" value="<%= parseInt(productToEdit.discount) %>" >
                 </div>
                 <div class="create-btn">
-                    <input class="button" type="submit" value="CREAR">
+                    <input class="button" type="submit" value="GUARDAR">
                     <input class="button" type="reset" value="LIMPIAR">
                 </div>
             </form>   
